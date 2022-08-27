@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 :root{
-  --background: black;
-  --line: black;
+  --background: #303030;
+  --line: #303030;
   --text: #fffcfc;
   --holder: #000000;
   --theme_container_border: rgba(146, 146, 146, 0.481);
   --theme-secondary: white;
-  --theme_shadow: black;
+  --theme_shadow: #303030;
 }
 
 [data-theme="light"] {
