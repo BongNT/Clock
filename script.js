@@ -2,9 +2,7 @@
 const targetDiv = document.getElementsByClassName("ad_container")[0];
 const close_button_ads = document.getElementById("close_ads");
 
-close_button_ads.onclick = function () {
-    targetDiv.style.display = "none";
-};
+
 
 
 // TRAILER CONTAINER CLOSE BUTTON
