@@ -38,54 +38,10 @@ document.getElementsByClassName("features_popup")[0].style.display = "none";
 // POLL
 let website = "flipclock.tk"
 
-document.getElementById('yes_button').addEventListener('click', function(e){
-    var yes_request = new XMLHttpRequest();
-    yes_request.open("GET", `https://api.countapi.xyz/hit/${website}/chat_yes`);
-    yes_request.responseType = "json";
 
-    yes_request.onload = function() {
-        document.getElementById('yes_button').innerText = this.response.value;
-        document.getElementById('yes_button').style.backgroundColor = "#42f068";
-        document.getElementById('yes_button').style.color = "black";
-        document.getElementById('yes_button').style.cursor = "not-allowed";
-        document.getElementById('yes_button').style.width = this.response.value*2.5+"px";
-
-
-        if (this.response.value > 100) {
-            document.getElementById('yes_button').style.width = "150px";
-            document.getElementById('yes_button').style.animation = "widthAnimation 2s ease-in-out";
-        }
-    }
-    yes_request.send();
-})
-document.getElementById('no_button').addEventListener('click', function(e){
-    var no_request = new XMLHttpRequest();
-    no_request.open("GET", `https://api.countapi.xyz/hit/${website}/chat_no`);
-    no_request.responseType = "json";
-
-    no_request.onload = function() {
-        document.getElementById('no_button').innerText = this.response.value;
-        document.getElementById('no_button').style.backgroundColor = "#FF5959";
-        document.getElementById('no_button').style.color = "black";
-        document.getElementById('no_button').style.cursor = "not-allowed";
-        document.getElementById('no_button').style.width = this.response.value*1+"px";
-
-        if (this.response.value > 100) {
-            document.getElementById('no_button').style.width = "110px";
-            document.getElementById('no_button').style.animation = "widthAnimation 2s ease-in-out";
-        }
-    }
-    no_request.send();
-})
 
 var current_ad = "feedback_form_clicks"
-document.getElementById('ad_link_click_counter').addEventListener('click', function(e){
-    var ad_link_click_request = new XMLHttpRequest();
-    ad_link_click_request.open("GET", `https://api.countapi.xyz/hit/${website}/${current_ad}`);
-    ad_link_click_request.responseType = "json";
-    ad_link_click_request.send();
-})
-// POLL
+
 
 
 
